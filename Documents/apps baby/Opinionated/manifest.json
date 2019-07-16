@@ -1,0 +1,22 @@
+{
+  "name": "Opinionated",
+  "version": "1.1.8",
+  "manifest_version": 2,
+  "description": "Warns you about untrustworthy sites",
+  "homepage_url": "https://github.com/akhilgupta1093/opinionated",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "https://*/*",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["inject.js"]
+    }
+  ]
+}
