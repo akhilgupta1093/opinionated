@@ -7,7 +7,9 @@ var readyStateCheckInterval = setInterval(function() {
 }, 10);
 
 function main() {
-
-    console.log(tab.url)
+  chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+    var url = tabs[0].url;
+    console.log(url)
+  });
 
 }
